@@ -64,14 +64,14 @@ const ItemWrapper = styled("div")(({ theme }) => ({
 
 export default function SearchAppbar() {
   return (
-    <Box sx={{ height: 66, borderBottom: 1 }}>
+    <Box sx={{ height: 66 }}>
       <AppBar
         position="relative"
         sx={{ padding: 0, backgroundColor: "white", color: "#5F6980" }}
         elevation={0}
       >
         <Toolbar sx={{ padding: { xs: 0 } }}>
-          <Search sx={{ ml: 4 }}>
+          <Search sx={{ ml: { xs: 2, md: 4 } }}>
             <SearchIconWrapper>
               <SearchIcon />
             </SearchIconWrapper>
@@ -81,9 +81,9 @@ export default function SearchAppbar() {
             />
           </Search>
 
-          <Box sx={{ ml: 4, mr: 4 }}>
+          <Box sx={{ mx: { xs: 2, md: 4 } }}>
             <ItemWrapper>
-              <IconWrapper>
+              <IconWrapper sx={{ display: { xs: "none", md: "flex" } }}>
                 <NotificationsOutlined />
                 <CalendarToday />
                 <GridViewOutlined />

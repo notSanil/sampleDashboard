@@ -2,7 +2,12 @@ import { Box, Card, CardContent, Typography } from "@mui/material";
 
 export default function Cards() {
   return (
-    <Box display={"flex"} flexDirection={"row"} gap={4} width={"100%"}>
+    <Box
+      display="flex"
+      sx={{ flexDirection: { xs: "column", md: "row" }, gap: { xs: 2, md: 4 } }}
+      width={"100%"}
+      height={"min-content"}
+    >
       <StatisticCard
         heading="Revenue"
         statistic="$56,945"
@@ -66,16 +71,24 @@ function StatisticCard({
   const color = colors[Math.sign(changePercentage) + 1];
 
   return (
-    <Card sx={{ borderRadius: 3, flex: "1 0 0" }}>
+    <Card sx={{ borderRadius: 3, flex: { xs: "1 1 1", md: "1 0 0" } }}>
       <CardContent>
-        <Typography fontSize={16} color={"#5F6980"} fontWeight={400}>
+        <Typography
+          fontSize={{ md: 16, xs: 14 }}
+          color={"#5F6980"}
+          fontWeight={400}
+        >
           {heading}
         </Typography>
-        <Typography fontSize={26} color={"#282828"} fontWeight={600}>
+        <Typography
+          fontSize={{ xs: 22, md: 26 }}
+          color={"#282828"}
+          fontWeight={600}
+        >
           {statistic}
         </Typography>
         <Box
-          mt={4}
+          mt={{ md: 4, xs: 3 }}
           display={"flex"}
           flexDirection={"row"}
           alignItems={"center"}

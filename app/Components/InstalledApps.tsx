@@ -78,7 +78,10 @@ function AppsTable() {
   };
 
   return (
-    <TableContainer component={Paper} sx={{ marginBottom: 3 }}>
+    <TableContainer
+      component={Paper}
+      sx={{ marginBottom: 3, boxShadow: "none" }}
+    >
       <Table>
         <TableHead sx={{ backgroundColor: "#F9FAFB", fontSize: 14 }}>
           <TableRow>
@@ -167,6 +170,7 @@ function AppsTable() {
               sx={{
                 "& .MuiTablePagination-displayedRows": { display: "none" },
                 "& .MuiTablePagination-spacer": { display: "none" },
+                borderBottom: 0,
               }}
             ></TablePagination>
           </TableRow>

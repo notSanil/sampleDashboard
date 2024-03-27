@@ -36,7 +36,7 @@ export default function Sidebar() {
         borderRight: "1px",
         borderColor: "#EAECF0",
         borderStyle: "solid",
-        display: "flex",
+        display: { xs: "none", md: "flex" },
         flexDirection: "column",
         bgcolor: "white",
       }}
